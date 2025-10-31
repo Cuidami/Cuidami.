@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Logo — Solo</title>
+  <style>
+    :root{
+      --verde:#2aa891;    /* manos/contorno */
+      --verde-osc:#007a66; 
+      --azul-corazon:#48b0d6; /* corazón */
+      background: #ffffff;
+    }
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:var(--background,#fff);
+      font-family: Inter, system-ui, Arial, sans-serif;
+    }
+    .logo-wrap{
+      width:360px; /* cambia tamaño */
+      height:360px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    svg{ width:100%; height:auto; display:block; }
+  </style>
+</head>
+<body>
+  <div class="logo-wrap" aria-label="Logo Cuidami - solo símbolo">
+    <!-- SVG recreación simplificada: casa (techo), manos y corazón -->
+    <svg viewBox="0 0 200 200" role="img" aria-labelledby="title desc">
+      <title id="title">Logo Cuidami</title>
+      <desc id="desc">Casa con manos y corazón en el centro</desc>
+
+      <!-- Manos (simples, estilizadas) -->
+      <g transform="translate(0,10)">
+        <path d="M30 120 C20 100, 20 80, 50 64 C70 54, 85 68, 100 82"
+              fill="none" stroke="var(--verde)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M170 120 C180 100, 180 80, 150 64 C130 54, 115 68, 100 82"
+              fill="none" stroke="var(--verde)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+
+      <!-- Casa (techo y paredes) -->
+      <g fill="none" stroke="var(--verde-osc)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+        <!-- techo -->
+        <path d="M40 70 L100 20 L160 70" />
+        <!-- pilares/paredes (suaves) -->
+        <path d="M52 80 L52 110" />
+        <path d="M148 80 L148 110" />
+      </g>
+
+      <!-- Contorno estilizado inferior que conecta manos -->
+      <path d="M45 130 C70 150, 130 150, 155 130" fill="none" stroke="var(--verde)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- Corazón (centro) -->
+      <path d="M100 86
+               C92 76,70 76,70 96
+               C70 116,100 132,100 132
+               C100 132,130 116,130 96
+               C130 76,108 76,100 86 Z"
+            fill="var(--azul-corazon)" stroke="none" />
+
+    </svg>
+  </div>
+</body>
+</html>
